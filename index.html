@@ -94,12 +94,20 @@
     nav { display: none; }
   }
 
-  /* Product Image */
+  /* Product Image — sticky on desktop only */
   .product-image-wrap {
-    position: sticky; top: 80px;
+    position: sticky;
+    top: 80px;
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid var(--border);
+  }
+  /* FIX: remove sticky behaviour on mobile */
+  @media(max-width:768px){
+    .product-image-wrap {
+      position: static;
+      top: auto;
+    }
   }
   .product-image-wrap img { width: 100%; height: auto; display: block; }
 
